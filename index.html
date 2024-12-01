@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Outpainting Tool</title>
+  <style>
+    /* General Reset */
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: white;
+      color: black;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Header with gradient and animation */
+    .header {
+      background: linear-gradient(90deg, #ff7f50, #ff4500);
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      animation: gradientShift 8s infinite alternate;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    .header p {
+      margin: 10px 0 0;
+      font-size: 1.2em;
+      font-weight: 300;
+    }
+
+    /* Gradient Animation */
+    @keyframes gradientShift {
+      0% {
+        background: linear-gradient(90deg, #ff7f50, #ff4500);
+      }
+      100% {
+        background: linear-gradient(90deg, #ff4500, #ff7f50);
+      }
+    }
+
+    /* Main Content */
+    .main-content {
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .main-box {
+      background-color: #f4f4f4;
+      margin: 20px auto;
+      border: 3px solid red;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      padding: 15px;
+      width: 90%;
+      max-width: 900px;
+    }
+
+    .integrated-tool {
+      width: 100%;
+      height: 450px;
+      border: none;
+      border-radius: 8px;
+    }
+
+    /* End Line */
+    .end-line {
+      margin-top: 20px;
+      font-size: 1.1em;
+      font-weight: 500;
+      color: #333;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .header h1 {
+        font-size: 2em;
+      }
+
+      .header p {
+        font-size: 1em;
+      }
+
+      .main-box {
+        padding: 10px;
+      }
+
+      .integrated-tool {
+        height: 300px;
+      }
+
+      /* Adjust container padding and margins for mobile */
+      .container {
+        padding: 10px;
+      }
+
+      /* Ensure the end line is properly spaced */
+      .end-line {
+        font-size: 1em;
+      }
+    }
+
+    /* Extra small screen adjustments */
+    @media (max-width: 480px) {
+      .header h1 {
+        font-size: 1.8em;
+      }
+
+      .integrated-tool {
+        height: 250px;
+      }
+
+      .end-line {
+        font-size: 0.9em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1>Expand Your Imagination</h1>
+      <p>Transform your images with just a prompt</p>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="container">
+      <div class="main-box">
+        <iframe
+          src="https://fffiloni-diffusers-image-outpaint.hf.space"
+          frameborder="0"
+          class="integrated-tool"
+          loading="lazy"
+        ></iframe>
+      </div>
+      <p class="end-line">Discover the power of creativity, one prompt at a time.</p>
+    </div>
+  </main>
+</body>
+</html>
